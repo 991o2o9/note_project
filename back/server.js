@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const multer = require("multer");
 const path = require("path");
+const cors = require("cors");
 const notesRoutes = require("./routes/notes");
 
 const app = express();
@@ -19,8 +20,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Middleware
 app.use(bodyParser.json());
+app.use(cors());
 
 // Подключение папки для статических файлов
 app.use("/uploads", express.static("uploads"));

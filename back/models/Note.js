@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 
 const NoteSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    required: true,
+    unique: true,
+  },
   title: {
     type: String,
     required: true,
@@ -13,7 +18,11 @@ const NoteSchema = new mongoose.Schema({
     type: [String],
     default: [],
   },
-  image: {
+  color: {
+    type: String,
+    default: "#ffffff",
+  },
+  imagePath: {
     type: String,
     required: false,
   },
