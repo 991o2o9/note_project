@@ -8,6 +8,7 @@
 }
 
 body {
+  background-color: #fff;
   margin: 0;
   cursor: default;
   overflow-x: hidden;
@@ -15,4 +16,23 @@ body {
 
 .container {
   margin: 30px 0px 100px 0px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
